@@ -415,6 +415,8 @@ and reload the rules with:
 sudo udevadm control --reload-rules
 ```
 
+> Note some users have reported simplier to achieve success by using an allow all rule of `KERNEL=="hidraw*", SUBSYSTEM=="hidraw", MODE="0664", GROUP="plugdev"` as seen  [here in a StackExchange answer](https://unix.stackexchange.com/questions/85379/dev-hidraw-read-permissions/85459)
+
 For a complete example, see the
 [blink1 udev rules](https://github.com/todbot/blink1/blob/master/linux/51-blink1.rules).
 
